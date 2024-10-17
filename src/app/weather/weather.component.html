@@ -1,0 +1,28 @@
+<!-- weather.component.html -->
+
+<h1>Weather App</h1>
+
+    <section >    
+        <form (ngSubmit)="getWeatherData()">
+          <input type="text" [(ngModel)]="city" name="city" placeholder="Enter City Name" required>
+          <button type="submit">Search</button>
+          
+        </form>
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      </section>
+      
+      <section *ngIf="weatherData" >
+        <p>Date: {{ currentDateFormatted }}</p>
+        <p>Time: {{ currentTimeFormatted }}</p>
+        <h2>{{ weatherData.name }} Weather</h2>
+        <p>Temperature: {{ formatTemperature(weatherData.main.temp) }}°C</p>
+        <!-- <p>Description: {{ weatherData.weather[0].description }}</p> -->
+        <div *ngIf="weatherIcon">
+          <img [src]="weatherIcon" alt="Weather Icon">
+        </div>
+        <p  *ngIf="weatherDescription">{{ weatherDescription }}</p>
+      </section>
+      
+     <p class= "weather-description" >&copy; 2024 Mary Njuguna</p>
+
+      

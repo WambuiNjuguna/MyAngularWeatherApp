@@ -1,0 +1,15 @@
+/* app.component.css */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url('../assets/images/Weather Image.jpg'); */
+    /* background-size: cover; */
+    background: linear-gradient(135deg,#00feba,#5b548a);
+  }
+
+  .container {
+    text-align: center;
+  }
+  

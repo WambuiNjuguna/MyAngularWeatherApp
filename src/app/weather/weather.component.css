@@ -1,0 +1,14 @@
+weather-info{
+position: fixed;
+left: 50%;
+background-color: aqua;
+
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+
+weather-description{
+    margin-top: 100px;
+}
